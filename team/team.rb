@@ -1,11 +1,12 @@
 class Team
 
-  attr_accessor :team_name, :players, :coach
+  attr_accessor :team_name, :players, :coach, :points
 
   def initialize(input_team_name, input_players, input_coach)
     @team_name = input_team_name
     @players = input_players
     @coach = input_coach
+    @points = 0
   end
 
   #longform defining of setters and getters
@@ -29,5 +30,19 @@ class Team
     @players.push(new_player)
   end
 
-
+  def find_player(name)
+    if @players.include? name
+      name
+    end
   end
+
+  def game(result)
+    if result == "win"
+      @points += 3
+    else
+      @points -= 3
+    end
+  end
+
+
+end

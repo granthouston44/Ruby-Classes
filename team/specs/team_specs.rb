@@ -47,8 +47,39 @@ class TestTeam < MiniTest::Test
     #assert that the players array has increased in size
     assert_equal(5, team.players.length)
     # p team.players
-
   end
+
+  def test_find_player__returns_name
+    #create a new instance of team class
+    team = Team.new("Code Clan Rovers", ["Anna", "Ally", "Colin", "Lindsay"], "Maria")
+    #call the find player method for Andrew
+    result = team.find_player("Ally")
+    #assert that andrew has been found
+    assert_equal("Ally", result)
+  end
+
+  def test_find_player__returns_nil
+    #create a new instance of team class
+    team = Team.new("Code Clan Rovers", ["Anna", "Ally", "Colin", "Lindsay"], "Maria")
+    #call the find player method for a non existent player
+    result = team.find_player("WeeJimmy")
+    #assert equal nil for player not found
+    assert_nil(result)
+  end
+
+  def test_team_points__won
+    team = Team.new("Code Clan Rovers", ["Anna", "Ally", "Colin", "Lindsay"], "Maria")
+    team.game("win")
+    assert_equal(3, team.points)
+  end
+
+  # def test_team__lose
+  #
+  # end
+  #
+  # def test
+  #
+  # end
 
 
 end

@@ -28,4 +28,26 @@ def test_student_cohort
   assert_equal("G16", student.cohort)
 end
 
+#test setter method for student name
+def test_set_student_name
+#create a student instance
+student_1 = Student.new("Grant", "G16")
+#use set student name to change student name to Alan
+student_1.set_name("Alan")
+#assert that name has been changed to Alan
+assert_equal("Alan", student_1.name)
+end
+
+def test_set_cohort
+#create student instance
+student_2 = Student.new("Debbie", "G16")
+#use set cohort to change students cohort to G14
+student_2.set_cohort("G14")
+#assert that the cohort has changed
+assert_equal("G14", student_2.cohort)
+end
+
+
+
+
 end

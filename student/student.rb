@@ -8,27 +8,27 @@ class Student
     @cohort = input_cohort
   end
 
-#getter
+  #getter
   def name
     @name
   end
 
-#getter
+  #getter
   def cohort
     @cohort
   end
 
-#setter
+  #setter
   def set_name(name)
     @name = name
   end
 
-#setter
+  #setter
   def set_cohort(cohort)
     @cohort = cohort
   end
 
-#setter
+  #new method
   def speech(speech_words)
     p speech_words
   end

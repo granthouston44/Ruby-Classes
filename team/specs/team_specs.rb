@@ -73,13 +73,12 @@ class TestTeam < MiniTest::Test
     assert_equal(3, team.points)
   end
 
-  # def test_team__lose
-  #
-  # end
-  #
-  # def test
-  #
-  # end
+  def test_team__lose
+    team = Team.new("Code Clan Rovers", ["Anna", "Ally", "Colin", "Lindsay"], "Maria")
+    team.game("lose")
+    assert_equal(-3, team.points)
+  end
+  
 
 
 end

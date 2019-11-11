@@ -5,6 +5,7 @@ require_relative('../library.rb')
 class TestLibrary < MiniTest::Test
 
   def setup
+    #create a new instance of the library class which will contain the books property
     @library = Library.new(
       {
         title: "lord_of_the_rings",
@@ -27,6 +28,13 @@ class TestLibrary < MiniTest::Test
         }
       }, @library.get_books)
   end
+
+  def test_find_book_info
+    result = @library.find_book_info("lord_of_the_rings")
+    assert_equal({  student_name: "Jeff",
+      date: "01/12/16"}, result)
+  end
+
 
 
 

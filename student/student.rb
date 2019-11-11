@@ -8,20 +8,34 @@ class Student
     @cohort = input_cohort
   end
 
+#getter
   def name
     @name
   end
 
+#getter
   def cohort
     @cohort
   end
-  
+
+#setter
   def set_name(name)
     @name = name
   end
 
+#setter
   def set_cohort(cohort)
     @cohort = cohort
+  end
+
+#setter
+  def speech(speech_words)
+    p speech_words
+  end
+
+
+  def fav_language(language)
+    p "My fav language is #{language}!"
   end
 
 end
